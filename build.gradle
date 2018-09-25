@@ -1,0 +1,23 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        compile 'ch.qos.logback:logback-classic:1.1.5'
+        testCompile 'junit:junit:4.12'
+    }
+
+//    version = '0.0.1'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
